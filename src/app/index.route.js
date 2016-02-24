@@ -9,11 +9,11 @@
   function routeConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
     $locationProvider.html5Mode({
-        enabled: true, 
-        requireBase: false, 
+        enabled: true,
+        requireBase: false,
         rewriteLinks: false
     });
-    
+
     $stateProvider
       .state('home', {
         url: '/',

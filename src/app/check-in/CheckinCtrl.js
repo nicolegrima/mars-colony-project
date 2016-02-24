@@ -13,14 +13,14 @@
 // placeholder for POST request to /colonist
   	$scope.colonist = {};
 
-// fetch all the jobs 
+// fetch all the jobs
   	$http({
   		method: 'GET',
   		url: JOBS_GET_URL
   	}).then(function(response) {
   			$scope.jobs = response.data.jobs;
   	}, function(error) {
-  			// TO DO for Back END: Handle Error 
+  			// TO DO for Back END: Handle Error
   	});
 
 

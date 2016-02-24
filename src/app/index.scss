@@ -5,7 +5,7 @@
 // bower:scss
 // endbower
 
-/* IMPORT scss folders */ 
+/* IMPORT scss folders */
 
 @import "check-in/check-in";
 @import "encounters/encounters";
@@ -14,11 +14,15 @@
 @import "report/report";
 
 
+/* what came with the See file */
+/* @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic); */
 
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+/* What I am using for this project */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
 
 $red-color: #ed4343;
-$red-font: 'Roboto Slab', serif;
+$red-font: 'Roboto', sans-serif;
+
 
 html, body {
   width:100%;
@@ -42,7 +46,7 @@ html, body {
 }
 
 .welcome {
-	
+
 	height: 100vh;
 
 	display:flex;
@@ -52,7 +56,7 @@ html, body {
 
 	img { width: 42%; }
   h1  { text-align:center; }
-  
+
 }
 
 /**

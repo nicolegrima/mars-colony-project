@@ -9,22 +9,76 @@
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 2.4rem;
 	color: #ffffff;
+	text-align: center;
+	display: block;
+	font-weight: lighter;
+	text-transform: uppercase;
 }
 
 h3 {
-	font-size: 1.25rem;
+	font-size: 2rem;
 	color: #ffffff;
+	text-align: center;
+	display: block;
+	font-weight: lighter;
 }
 
 .banner-image {
-	background: 
-	url(./assets/marscity.jpg) no-repeat center top;
+	background:
+	url(./assets/marscity.jpg) no-repeat center;
 	background-size: cover;
 	height: 100vh;
 	width: 100vw;
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
+}
+
+.enter-button {
+	display: block;
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	align-items: center;
+	text-align: center;
+	align-self: center;
+	opacity: 0.8;
+	background: rgba(237, 237, 237, 0.8);
+	animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+0% {
+	background: rgba(237, 237, 237, 0.8);
+	transform: scale(0.2, 0.2);
+	opacity: 0.8;
+}
+
+25% {
+	background: rgba(237, 237, 237, 0.6);
+	transform: scale(0.4, 0.4);
+	opacity: 0.6;
+}
+
+50% {
+	background: rgba(237, 237, 237, 0.4);
+	transform: scale(0.6, 0.6);
+	opacity: 0.4;
+}
+
+75% {
+	background: rgba(237, 237, 237, 0.25);
+	transform: scale(0.8, 0.8);
+	opacity: 0.25;
+}
+
+100% {
+	background: rgba(237, 237, 237, 0.1);
+	transform: scale(1, 1);
+	opacity: 0.1;
+}
+
 }
