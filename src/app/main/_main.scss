@@ -17,3 +17,14 @@ h3 {
 	font-size: 1.25rem;
 	color: #ffffff;
 }
+
+.banner-image {
+	background: 
+	url(./assets/marscity.jpg) no-repeat center top;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
