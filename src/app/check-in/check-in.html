@@ -1,6 +1,29 @@
 <div class="checkin-wrapper">
 
 <h2>Register</h2>
-<Button>Check in</Button>
+
+<div class="checkin-form">
+
+		<label for="">name:</label>label>
+		<input type="text" ng-model="colonist.name"/>
+		<br>
+
+		<label for="">age:</label>label>
+		<input type="text" ng-model ="colonist.age"/>
+		<br>
+
+		<select name="jobs" id="jobs" ng-model="colonist.job_id">
+		<option value=""> -- Select a job -- </option>
+		<option value="{{ job.id }}" ng-repeat="job in jobs">{{ job.name }}</option>
+
+		</select>
 
 </div>
+
+<Button ng-click="login($event)">Check in</Button>
+
+</div>
+
+
+
+} -->
