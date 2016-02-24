@@ -28,19 +28,19 @@
       })
 
       .state('encounters', {
-        url: '/encounters'
+        url: '/encounters',
         templateUrl: 'app/encounters/encounters.html',
         controller: 'EncountersCtrl',
       })
 
       .state('report', {
-        url: '/report'
+        url: '/report',
         templateUrl: 'app/report/report.html',
         controller: 'ReportCtrl',
       })
 
       .state('report-filed', {
-        url: '/report-filed'
+        url: '/report-filed',
         templateUrl: 'app/report/report-filed.html',
         controller: 'ReportCtrl',
       });
