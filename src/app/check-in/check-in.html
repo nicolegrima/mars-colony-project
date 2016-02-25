@@ -2,13 +2,13 @@
 
 <h2>Register</h2>
 
-<div class="checkin-form">
+<form action="" name="checkinForm" class="checkin-form" ng-class="{'show-validation': showValidation}">
 		<div class="underline">
-				<input type="text" placeholder="Name" ng-model="colonist.name"/>
+				<input type="text" placeholder="Name" ng-model="colonist.name" required minlength="3"/>
 	  </div>
 
 		<div class="underline">
-				<input type="text" placeholder="Age" ng-model ="colonist.age"/>
+				<input type="text" placeholder="Age" ng-model ="colonist.age"required />
 		</div>
 
 		<div class="underline">
@@ -19,7 +19,7 @@
 				</select>
 		</div>
 
-</div>
+</form>
 
 <Button class="checkin-button" ng-click="login($event)">Check in</Button>
 
