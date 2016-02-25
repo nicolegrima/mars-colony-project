@@ -3,24 +3,25 @@
 <h2>Register</h2>
 
 <div class="checkin-form">
+		<div class="underline">
+				<input type="text" placeholder="Name" ng-model="colonist.name"/>
+	  </div>
 
-		<label for="">name:</label>label>
-		<input type="text" ng-model="colonist.name"/>
-		<br>
+		<div class="underline">
+				<input type="text" placeholder="Age" ng-model ="colonist.age"/>
+		</div>
 
-		<label for="">age:</label>label>
-		<input type="text" ng-model ="colonist.age"/>
-		<br>
-
-		<select name="jobs" id="jobs" ng-model="colonist.job_id">
-		<option value=""> -- Select a job -- </option>
-		<option value="{{ job.id }}" ng-repeat="job in jobs">{{ job.name }}</option>
-
-		</select>
+		<div class="underline">
+				<label for="">Select occupation</label>
+				<select placeholder="Select occupation" name="jobs" id="jobs" ng-model="colonist.job_id">
+				<option value="">Select occupation</option>
+				<option  value="{{ job.id }}" ng-repeat="job in jobs">{{ job.name }}</option>
+				</select>
+		</div>
 
 </div>
 
-<Button ng-click="login($event)">Check in</Button>
+<Button class="checkin-button" ng-click="login($event)">Check in</Button>
 
 </div>
 

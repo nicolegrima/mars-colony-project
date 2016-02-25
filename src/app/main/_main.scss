@@ -1,5 +1,4 @@
 .main-wrapper {
-	background: red;
 	width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -48,6 +47,7 @@ h3 {
 	opacity: 0.8;
 	background: rgba(237, 237, 237, 0.8);
 	animation: pulse 1s infinite;
+	cursor: pointer;
 }
 
 @keyframes pulse {

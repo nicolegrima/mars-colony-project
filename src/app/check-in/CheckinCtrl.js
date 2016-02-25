@@ -23,7 +23,6 @@
   			// TO DO for Back END: Handle Error
   	});
 
-
   	$scope.login = function() {
   		event.preventDefault();
 
@@ -39,7 +38,7 @@
   		}, function(error){
   			console.log(error);
   		});
-  	}
+  	};
 
   }
 
