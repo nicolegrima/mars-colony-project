@@ -1,30 +1,29 @@
 <div class="checkin-wrapper">
 
-<h2>Register</h2>
+	<h2>Register</h2>
 
-<form action="" name="checkinForm" class="checkin-form" ng-class="{'show-validation': showValidation}">
+	<form action="" name="checkinForm" class="checkin-form" ng-class="{'show-validation': showValidation}">
 		<div class="underline">
 				<input type="text" placeholder="Name" ng-model="colonist.name" required minlength="3"/>
 	  </div>
 
 		<div class="underline">
-				<input type="text" placeholder="Age" ng-model ="colonist.age"required />
+				<input type="text" placeholder="Age" ng-model="colonist.age" alt="" required />
 		</div>
 
 		<div class="underline">
 				<label for="">Select occupation</label>
+
 				<select placeholder="Select occupation" name="jobs" id="jobs" ng-model="colonist.job_id">
-				<option value="">Select occupation</option>
-				<option  value="{{ job.id }}" ng-repeat="job in jobs">{{ job.name }}</option>
+
+					<option value="">Select occupation</option>
+					<option  value="{{ job.id }}" ng-repeat="job in jobs">{{ job.name }}</option>
+
 				</select>
 		</div>
 
-</form>
+	</form>
 
-<Button class="checkin-button" ng-click="login($event)">Check in</Button>
+	<Button class="checkin-button" ng-click="login($event)">Check in</Button>
 
 </div>
-
-
-
-} -->

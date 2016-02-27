@@ -10,9 +10,6 @@
   	var JOBS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/jobs';
   	var COLONIST_POST_URL = 'https://red-wdp-api.herokuapp.com/api/mars/colonists';
 
-// placeholder for POST request to /colonist
-  	$scope.colonist = {};
-
 // fetch all the jobs
   	$http({
   		method: 'GET',
@@ -20,8 +17,11 @@
   	}).then(function(response) {
   			$scope.jobs = response.data.jobs;
   	}, function(error) {
-  			// TO DO for Back END: Handle Error
+  			// TO DO for Back-End Dev: Handle Error
   	});
+
+    // placeholder for POST request to /colonist
+      	$scope.colonist = {};
 
     $cookies.putObject('mars_colonist', undefined);
 
@@ -42,12 +42,10 @@
 			}
 
   		}).then(function(response) {
-
-        $cookies.putObject('mars_colonist', response.data.colonist);
-        // $rootScope.colonist = response.data.colonist;
-        $state.go('encounters');
+            $cookies.putObject('mars_colonist', response.data.colonist);
+            $state.go('encounters');
   		}, function(error){
-  			// console.log(error);
+  			   // TO DO for Back-End Dev: Handle Error
   		});
   	}
 
