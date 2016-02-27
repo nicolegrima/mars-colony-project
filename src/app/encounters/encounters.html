@@ -1,4 +1,4 @@
-<div class="encounters-wrapper">
+<div class="encounters-wrapper" ng-controller="EncountersCtrl">
 
     <div class="encounters-top">
       <h2>Recent Encounters</h2>
@@ -10,7 +10,7 @@
     </div>
 
     <div class="encounters-bottom">
-      <Button class="encounter-button">Report Encounter</Button>
+      <Button class="encounter-button" ng-click="report($event)">Report Encounter</Button>
     </div>
 
 </div>

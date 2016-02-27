@@ -21,7 +21,7 @@
   	});
 
     // placeholder for POST request to /colonist
-      	$scope.colonist = {};
+    $scope.colonist = {};
 
     $cookies.putObject('mars_colonist', undefined);
 

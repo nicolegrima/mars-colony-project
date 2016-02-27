@@ -1,12 +1,12 @@
-// (function() {
-//   'use strict';
-//
-//   angular
-//     .module('red')
-//     .controller('EncountersCtrl', EncountersCtrl);
-//
-//   /** @ngInject */
-//   function EncountersCtrl($scope) {
+(function() {
+  'use strict';
+
+  angular
+    .module('red')
+    .controller('EncountersCtrl', EncountersCtrl);
+
+  /** @ngInject */
+  function EncountersCtrl($scope, $state, $http) {
 //     var ENCOUNTERS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 //
 //     $http({
@@ -19,5 +19,11 @@
 //     });
 //
 //   }
-//
-// })();
+
+    $scope.report = function() {
+      event.preventDefault();
+      $state.go('report');
+    };
+  }
+
+})();
