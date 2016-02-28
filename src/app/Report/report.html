@@ -1,25 +1,27 @@
 <div class="report-wrapper" ng-controller="ReportCtrl">
 
+<div class="report-top">
   <h2>Report Encounter</h2>
   <h3>Safety on Mars is your responsibility</h3>
+</div>
 
   <form action="" name="reportForm" class="report-form" ng-class="{'show-validation': showValidation}">
 
     <div class="underline">
         <label for="">Select alien type</label>
 
-        <select placeholder="Select alien type" name="aliens" id="aliens" ng-model="">
+        <select placeholder="Select alien type" name="aliens" id="aliens" ng-model="aliens.alien_type">
 
-          <option value="">Select alien type</option>
-          <!-- <option  value="{{ job.id }}" ng-repeat="job in jobs">{{ job.name }}</option> -->
-          <option  value="" ng-repeat="">{{ "Hello Aliens" }}</option>
+            <option value="">Select alien type</option>
+            <option  value="{{ alien.id }}" ng-repeat="alien in aliens">{{ alien.type }}</option>
 
         </select>
-
-        <div class="action-report">
-            <input type="text" placeholder="Action taken" ng-model="" required minlength="3"/>
-        </div>
     </div>
+
+    <div class="action-report">
+        <textarea type="text" placeholder="Action taken" ng-model="" required minlength="5"/></textarea>
+    </div>
+
 
 
   </form>
