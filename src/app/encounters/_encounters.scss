@@ -21,14 +21,54 @@
 	margin-bottom: 0.25px;
 }
 
+.encounters-section p,
+.encounters-section span,
 .encounters-top h3 {
 	font-size: 1.1rem;
 	margin-top: 0.25px;
+	font-weight: lighter;
+}
+
+.encounters-top {
+	height: 30%;
+}
+
+.encounters-section {
+	height: 70%;
+	width: 100%;
+	font-size: 1.5rem;
 }
 
 .encounters-list {
-	height: 70%;
+	list-style: none;
+	line-height: 1rem;
+	// margin-bottom: 1rem;
+	flex: 1;
+	overflow: scroll;
+	height: inherit;
+	width: inherit:
+
 }
+
+.date-type {
+	display: flex;
+	margin-bottom: 0.5rem;
+
+	span {
+		padding: 0 0.5rem;
+		margin-bottom: 0.1rem;
+		align-self: center;
+	}
+
+	p {
+		margin-bottom: 0.1rem;
+	}
+}
+
+.action {
+	margin-bottom: 2rem;
+}
+
 .encounter-button {
 	font-size: 2.4rem;
 	font-weight: lighter;
@@ -47,4 +87,5 @@
 	align-items: center;
 	// height: 20%;
 	width: 100%;
+	bottom: 0;
 }

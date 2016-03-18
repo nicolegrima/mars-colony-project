@@ -5,8 +5,19 @@
       <h3>See an Alien? Report it!</h3>
     </div>
 
-    <div class="encounters-list">
-      <div>List goes here</div>
+    <div class="encounters-section">
+      <ul class="encounters-list" >
+        <li ng-repeat="encounter in encounters">
+          <div class="date-type">
+            <p>{{ encounter.date }}</p>
+            <span> - </span>
+            <p>{{ encounter.atype }}</p>
+          </div>
+          <div class="action">
+          <p>{{ encounter.action }}</p>
+        </div>
+        </li>
+      </ul>
     </div>
 
     <div class="encounters-bottom">

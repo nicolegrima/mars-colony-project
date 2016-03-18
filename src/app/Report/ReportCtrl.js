@@ -7,10 +7,11 @@
 
   /** @ngInject */
   function ReportCtrl($scope, $cookies, $http, $state, $filter) {
-    var ENCOUNTER_POST_URL = 'https://red-wdp-api.herokuapp.com/api/mars/reports';
+    var ENCOUNTER_POST_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
     var ALIENS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
 
-    $https({
+// fetch all alien types
+    $http({
       method: 'GET',
       url: ALIENS_GET_URL
     }).then(function(response) {
@@ -23,14 +24,14 @@
 
         $scope.encounter = {
           colonist_id: $cookies.getObject('mars_colonist').id,
-          date: $filter('date')(newDate(), 'yyyy-MM-dd')
+          date: $filter('date')(new Date(), 'yyyy-MM-dd')
         };
 
-    $scope.submitReport = function(e, form) {
-        e.preventDefault();
+    $scope.submit = function($event) {
+        event.preventDefault();
 
-        if (form.$invalid) {
-            $scope.showValidation = true;
+        if ($scope.reportForm.$invalid) {
+            $scope.validate = true;
           } else {
 
     $http({
@@ -45,7 +46,7 @@
     }, function(error) {
           // TO DO for Back-End Dev: Handle Error
     });
-//
+
         }
       };
    }

@@ -16,12 +16,20 @@ h2 {
 	text-transform: uppercase;
 }
 
+.banner-image h2 {
+	text-shadow: 2px 2px 4px #46D246;
+}
+
 h3 {
 	font-size: 2rem;
 	color: #ffffff;
 	text-align: center;
 	display: block;
 	font-weight: lighter;
+}
+
+.banner-image h3 {
+	text-shadow: 2px 2px 4px #b7410e;
 }
 
 .banner-image {

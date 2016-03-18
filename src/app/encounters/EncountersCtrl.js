@@ -7,23 +7,26 @@
 
   /** @ngInject */
   function EncountersCtrl($scope, $state, $http) {
-//     var ENCOUNTERS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
-//
-//     $http({
-//       method: 'GET',
-//       url: ENCOUNTERS_GET_URL
-//     }).then(function(response) {
-//           $scope.reports = response.data.reports;
-//     }), function(error) {
-//
-//     });
-//
-//   }
+    var ENCOUNTERS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 
     $scope.report = function() {
       event.preventDefault();
       $state.go('report');
     };
+
+// fetch all the encounters
+    $http({
+      method: 'GET',
+      url: ENCOUNTERS_GET_URL
+    }).then(function(response) {
+          $scope.encounters = response.data.encounters;
+    }, function(error) {
+
+    });
+
   }
 
-})();
+
+  }
+
+)();

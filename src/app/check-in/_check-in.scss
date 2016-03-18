@@ -43,6 +43,25 @@
 	border-bottom: 1px solid #ffffff;
 	padding-top: 2rem;
 	padding-bottom: 0.25rem;
+	display: inline-flex;
+	position: relative;
+}
+
+select {
+	// overflow: visible !important;
+	appearance: none;
+	color: red;
+	font-size: 1.1rem;
+	width: 100%;
+	border: 1px solid transparent;
+	background: 0 0;
+	box-sizing: border-box;
+	position: relative;
+}
+
+option {
+	font-size: 2rem;
+	position: absolute;
 }
 
 input {
@@ -56,6 +75,7 @@ input::placeholder {
 	color: red;
 	font-size: 1.1rem;
 }
+
 
 input:focus {
 	color: #ffffff;
