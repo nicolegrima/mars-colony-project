@@ -82,6 +82,27 @@ input:focus {
 	font-size: 1.1rem;
 }
 
+@keyframes invalid {
+	 0% {
+		 border: 3px solid transparent;
+	 }
+
+	 100% {
+		 border: 3px solid red;
+	 }
+}
+
+.invalid {
+	transition: 0.5s infinite all;
+
+	input, select, option {
+		&.ng-invalid {
+			animation: invalid 1s infinite;
+		}
+	}
+}
+
+
 // .show-validation {
 // 	transition: 0.5s linear all;
 // }
